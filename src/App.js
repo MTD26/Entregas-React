@@ -7,9 +7,13 @@ import { AppContador } from './components/ItemCount';
 function App() {
   return (
     <>
+    
     <NavBar />
+    
     <ItemListContainer greetings='Bienvenido/a a la tienda!'/>
+    
     <AppContador stock="hay"/>
+   
     </>
   );
 }
