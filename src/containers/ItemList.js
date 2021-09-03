@@ -1,4 +1,4 @@
-/*import React from 'react'
+import React from 'react'
 import Item from '../Item/Item'
 
 function ItemList({productos}) {
@@ -11,4 +11,4 @@ function ItemList({productos}) {
     )
 }
 
-export default ItemList */
+export default ItemList 
