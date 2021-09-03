@@ -11,9 +11,9 @@ function App() {
     
     <NavBar />
     
-    <ItemListContainer greetings='Bienvenido/a a la tienda!'/>
+    <ItemListContainer/>
     
-    <AppContador/>
+    {/* <AppContador/> */}
    
     </>
   );

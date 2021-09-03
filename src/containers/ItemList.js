@@ -1,12 +1,14 @@
 import React from 'react'
-import Item from '../Item/Item'
+import Item from './Item'
 
-function ItemList({productos}) {
+function ItemList({items}) {
     return (
         <>
-           <ul>
-                { productos.map((item)=>  <Item item={item} />  )  }
-            </ul>   
+           <div class="container-fluid">
+           { items.map((item)=>  <Item item={item} />  )  }
+            </div>
+               
+            
         </>
     )
 }
