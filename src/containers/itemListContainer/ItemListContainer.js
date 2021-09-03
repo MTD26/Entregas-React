@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { tarea } from '../../../utils/promesas'
+import React, { useState , useEffect} from 'react'
+import { tarea } from '../../utils/promesas'
 
 const ItemListContainer = () =>{
 
@@ -8,13 +8,13 @@ const ItemListContainer = () =>{
     useEffect(() => {
         tarea
         .then((resp)=> setItems(resp))
-    ,[]});
+    },[]);
 
     console.log(items)
    
     return (
     <div>
-        
+
     </div>
     
     
