@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './containers/itemListContainer';
+import ItemListContainer from './containers/ItemListContainer';
 import { AppContador } from './components/ItemCount';
+import React from 'react'
+
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
     
     <NavBar />
     
-    <ItemListContainer greetings='Bienvenido/a a la tienda!'/>
+    <ItemListContainer greetings='Bienvenido/a a la tienda!!'/>
     
-    <AppContador stock="hay"/>
+    <AppContador/>
    
     </>
   );
