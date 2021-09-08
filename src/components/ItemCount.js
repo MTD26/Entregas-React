@@ -27,11 +27,11 @@ export function AppContador() {
 
   return (
     <div>
-      <h1>Producto</h1>
+      {/* <h1>Producto</h1> */}
 
-      <button onClick={handlerClickResta}>-</button>
+      <button onClick={handlerClickResta} class="btn btn-secondary">-</button>
       <label>{count}</label>
-      <button onClick={handlerClickSuma}>+</button>
+      <button onClick={handlerClickSuma} class="btn btn-secondary">+</button><br/>
       <label>Stock: {stock}</label>
     </div>
   );
