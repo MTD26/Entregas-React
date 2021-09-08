@@ -22,7 +22,7 @@ function Item({item}) {
                  <div class="card-body">
                  <h5 class="card-title">{item.name}</h5>
                  <p class="card-text">  ${item.price}</p>
-                 <a href="#" class="btn btn-primary">Comprar</a>
+                 <a href="#" class="btn btn-dark" >Ver detalle</a>
                  </div>
             </div>
         </>
