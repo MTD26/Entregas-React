@@ -25,7 +25,7 @@ function Item({item}) {
                  <div class="card-body">
                  <h5 class="card-title">{name}</h5>
                  <p class="card-text">  ${price}</p>
-                 <NavLink to={'/productos/${id}'}><a href="#" class="btn btn-dark" >Ver detalle</a></NavLink>
+                 <NavLink to={`/productos/${id}`}><a href="#" class="btn btn-dark" >Ver detalle</a></NavLink>
                  </div>
             </div>
         </>

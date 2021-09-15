@@ -19,10 +19,10 @@ function App() {
     <AppContext.Provider value={{producto, setProducto}}/>
     <NavBar />
     <Switch>
-    <Route exact path="/">
+    <Route exact path='/productos/:id'>
     <ItemListContainer />
     </Route>
-    <Route exact path="/productos/:id">
+    <Route exact path="/">
     <ItemDetailContainer />
     </Route>
     <Route>
