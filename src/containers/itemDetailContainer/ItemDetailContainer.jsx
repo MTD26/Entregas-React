@@ -1,43 +1,32 @@
 import React, { useState, useEffect} from "react";
 import ItemDetail from "./ItemDetail";
 import { tarea } from "./../../utils/promesas";
+import {useParams} from 'react-router-dom'
 
 
 
 
-function ItemDetailContainer(props){
-    const [productoDetalle, setProductoDetalle] = useState({})
-  
-    const id = props.match.params.id;
-   
-    const promise =  new Promise((resolve, reject)=>{
-        const foundProduct = productos.find((p)=> p.id === parseInt(id));
-        if (foundProduct){
-            resolve(foundProduct)
-        }else{
-            reject('product not found')
-        }
-    })
-   
-    const [productos, setProductos] = useState([])
+function ItemDetailContainer(){
+    // había un props en el paréntesis
+    // const [productoDetalle, setProductoDetalle] = useState({})
+    
+    const [producto, setProducto] = useState({})
+    const {id} = useParams()
+    
     useEffect(()=>{
         tarea.then(
-            (resp => setProductos(resp) )
+            (resp => setProducto(resp.find((p)=> p.id === id)) )
         )
         
     },[])
-    console.log(productos)
+    
 
-    useEffect(()=>{
-            promise.then(res => setTimeout(()=> setProductoDetalle(res), 1500)
-            .catch(err => console.log(err)) )
-        }
-    )
+
 
     return (
         <>
-         <ItemDetail producto={productoDetalle} />
-         {/* { productos.map((producto)=>  <ItemDetail producto={producto} />  )  } */}
+         <ItemDetail producto={producto} />
+         
         </>
         
     )

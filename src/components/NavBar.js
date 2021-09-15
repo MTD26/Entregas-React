@@ -1,6 +1,6 @@
 import React from 'react'
 import Carrito from './KartWidget'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
     return (
@@ -24,7 +24,7 @@ function NavBar() {
                           </li>
                       </ul>
                   <span class="navbar-text">
-                  <Carrito />
+                  <NavLink to={`/cart`}><Carrito /></NavLink>
                   </span>
                   </div>
               </nav>

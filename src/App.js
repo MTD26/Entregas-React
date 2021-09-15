@@ -6,6 +6,7 @@ import { AppContador } from './components/ItemCount';
 import React, {useState} from 'react'
 import { AppContext } from './context/cartContext';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Cart from './containers/Cart';
 
 
 
@@ -25,10 +26,9 @@ function App() {
     <Route exact path='/productos/:id'>
     <ItemDetailContainer />
     </Route>
-    <Route>
-    
+    <Route exact path='/cart'>
+    <Cart />
     </Route>
-    {/* <AppContador/> */}
     </Switch>
     </BrowserRouter>
   );

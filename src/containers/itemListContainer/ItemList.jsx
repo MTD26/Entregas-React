@@ -5,7 +5,7 @@ function ItemList({items}) {
     return (
         <>
            <div class="container-fluid">
-           { items.map((item)=>  <Item item={item} />  )  }
+           { items.map((item)=>  <Item item={item} key={item.id} />  )  }
             </div>
                
             
