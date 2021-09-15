@@ -1,12 +1,13 @@
 import React from 'react'
 import Carrito from './KartWidget'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
     return (
         <div className="App">
         {/* <header className="App-header"> */}
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">MI MARCA</a>
+                <Link to={'/'}><a class="navbar-brand" href="#">MI MARCA</a></Link>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                   </button>

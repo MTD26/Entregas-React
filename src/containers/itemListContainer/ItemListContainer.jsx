@@ -5,10 +5,12 @@ import ItemList from './ItemList'
 const ItemListContainer = () =>{
 
     const [items, setItems]= useState([])
+    
 
     useEffect(() => {
         tarea
-        .then((resp)=> setItems(resp))
+        .then((resp)=> setItems(resp)
+        )
     },[]);
 
     console.log(items)

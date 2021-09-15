@@ -5,6 +5,8 @@ import ItemDetailContainer from './containers/itemDetailContainer/ItemDetailCont
 import { AppContador } from './components/ItemCount';
 import React, {useState} from 'react'
 import { AppContext } from './context/cartContext';
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+
 
 
 function App() {
@@ -12,17 +14,23 @@ function App() {
   const [producto, setProducto] = useState()
 
   return (
-    <>
+    <BrowserRouter>
     
     <AppContext.Provider value={{producto, setProducto}}/>
     <NavBar />
-    
-    <ItemListContainer/>
+    <Switch>
+    <Route exact path="/">
+    <ItemListContainer />
+    </Route>
+    <Route exact path="/productos/:id">
     <ItemDetailContainer />
+    </Route>
+    <Route>
     
+    </Route>
     {/* <AppContador/> */}
-   
-    </>
+    </Switch>
+    </BrowserRouter>
   );
 }
 
